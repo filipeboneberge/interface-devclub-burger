@@ -35,6 +35,23 @@ export const Body = styled.div`
     width: 120px;
     border-radius: 10px;
   }
+
+  .quantity-container {
+    display: flex;
+    gap: 20px;
+
+    button {
+      height: 30px;
+      background-color: transparent;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    p {
+      margin-top: 5px;
+    }
+  }
 `;
 
 export const EmptyCart = styled.p`
