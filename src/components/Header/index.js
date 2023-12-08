@@ -18,7 +18,7 @@ import {
 } from "./styles";
 
 export function Header() {
-  const { logout } = useUser();
+  const { logout, userData } = useUser();
 
   const {
     push,
@@ -52,7 +52,7 @@ export function Header() {
         </PageLink>
         <Line></Line>
         <ContainerText>
-          <p>Olá, Filipe</p>
+          <p>Olá, {userData.name}</p>
           <PageLinkExit onClick={logoutUser}>Sair</PageLinkExit>
         </ContainerText>
       </ContainerRight>
