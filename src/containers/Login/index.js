@@ -61,6 +61,7 @@ export function Login() {
       toast.success("Seja bem-vindo!");
     } else if (status === 401) {
       toast.warning("Verifique seu e-mail e senha!");
+      return history.push("/login");
     } else {
       throw new Error();
     }
@@ -68,7 +69,11 @@ export function Login() {
     putUserData(data);
 
     setTimeout(() => {
-      history.push("/");
+      if (data.admin) {
+        history.push("/pedidos");
+      } else {
+        history.push("/");
+      }
     }, 1000);
   };
 
