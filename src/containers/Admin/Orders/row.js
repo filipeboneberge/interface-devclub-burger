@@ -19,7 +19,7 @@ import status from "./orderStatus";
 
 import api from "../../../services/api";
 
-function Row({ row }) {
+function Row({ row, setOrders, orders }) {
   const [open, setOpen] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(false);
 
@@ -27,6 +27,11 @@ function Row({ row }) {
     setIsLoading(true);
     try {
       await api.put(`orders/${id}`, { status });
+
+      const newOrders = orders.map((order) => {
+        return order._id === id ? { ...order, status } : order;
+      });
+      setOrders(newOrders);
     } catch (err) {
       console.error(err);
     } finally {
@@ -53,7 +58,7 @@ function Row({ row }) {
         <TableCell>{row.date}</TableCell>
         <TableCell>
           <ReactSelectStyle
-            options={status}
+            options={status.filter((sts) => sts.value !== "Todos")}
             menuPortalTarget={document.body}
             placeholder="status"
             defaultValue={
