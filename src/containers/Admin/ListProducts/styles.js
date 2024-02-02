@@ -10,6 +10,10 @@ export const Container = styled.div`
   justify-content: space-between;
 `;
 
+export const ContainerItems = styled.div`
+  padding: 20px;
+`;
+
 export const EditIconStyles = styled(EditIcon)`
   cursor: pointer;
 `;
