@@ -10,6 +10,7 @@ import PropTypes from "prop-types";
 
 import Orders from "./Orders";
 import ListProducts from "./ListProducts";
+import NewProduct from "./NewProduct";
 
 export function Admin({ match: { path } }) {
   return (
@@ -18,6 +19,7 @@ export function Admin({ match: { path } }) {
       <ContainerItems>
         {path === paths.Order && <Orders />}
         {path === paths.Products && <ListProducts />}
+        {path === paths.NewProduct && <NewProduct />}
       </ContainerItems>
     </Container>
   );
