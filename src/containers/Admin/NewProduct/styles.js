@@ -13,6 +13,7 @@ export const Container = styled.div`
     background-color: #565656;
     padding: 30px;
     border-radius: 10px;
+    min-width: 335px;
   }
 `;
 
@@ -30,7 +31,6 @@ export const Input = styled.input`
   border: none;
   margin-bottom: 25px;
   width: 100%;
-  min-width: 280px;
 `;
 
 export const ButtonStyles = styled(Button)`
