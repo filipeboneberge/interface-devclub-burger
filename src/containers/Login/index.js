@@ -15,7 +15,7 @@ import { Link, useHistory } from "react-router-dom";
 import LoginImg from "../../assets/imgLogin.svg";
 import Logo from "../../assets/logo.svg";
 
-import { Button } from "../../components";
+import { Button, ErrorMessage } from "../../components";
 
 import {
   Container,
@@ -24,7 +24,6 @@ import {
   Label,
   Input,
   SignLink,
-  ErrorMessage,
 } from "./styles";
 
 export function Login() {

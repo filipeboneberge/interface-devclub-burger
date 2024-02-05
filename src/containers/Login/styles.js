@@ -76,11 +76,3 @@ export const SignLink = styled.p`
     cursor: pointer;
   }
 `;
-
-export const ErrorMessage = styled.p`
-  color: #cc1717;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-`;
