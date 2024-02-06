@@ -27,6 +27,7 @@ function ListProducts() {
     async function loadOrders() {
       const { data } = await api.get("products");
       setProducts(data);
+      console.log(data);
     }
     loadOrders();
   }, []);
